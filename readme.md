@@ -9,7 +9,7 @@ RESTful API simple app build with Laravel
 * type `git clone git@github.com:ilhamarrouf/RestfulAPIwithLaravel.git projectname` to clone the repository 
 * type `cd projectname`
 * type `composer install`
-* in *.env* file :
+* in *.env* file set:
     * DB_CONNECTION
     * DB_HOST
     * DB_PORT
