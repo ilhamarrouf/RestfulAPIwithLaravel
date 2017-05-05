@@ -5,5 +5,8 @@ use Illuminate\Http\Request;
 Route::post('auth/register', 'AuthController@register');
 Route::post('auth/login', 'AuthController@login');
 Route::get('users', 'UserController@users');
-Route::get('users/profile', 'UserController@profile')->middleware('auth:api');
-Route::post('post', 'PostController@add')->middleware('auth:api');
+
+Route::group(['middleware' => 'auth:api'], function() {
+    Route::get('users/profile', 'UserController@profile');
+    Route::post('post', 'PostController@add');
+});
